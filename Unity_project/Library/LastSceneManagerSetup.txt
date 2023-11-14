@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/REMAPPING.unity
+- path: Assets/Scenes/LINEAR_TRACK.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

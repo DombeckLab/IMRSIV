@@ -48,7 +48,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/REMAPPING.unity:
+    Assets/Scenes/LINEAR_TRACK.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -158,11 +158,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6028}
     - Class: 114
-      Script: {instanceID: 19702}
-    - Class: 114
       Script: {instanceID: 19704}
     - Class: 114
       Script: {instanceID: 19706}
+    - Class: 114
+      Script: {instanceID: 19708}
+    - Class: 114
+      Script: {instanceID: 19766}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -1272,5 +1274,5 @@ ScriptsOnlyBuild:
     className: FPSCounter
   platform: 19
   scenePathNames:
-  - Assets/Scenes/REMAPPING.unity
-  playerPath: C:/Users/dombeck_lab/Desktop/ZenodoArchive/Medium_Quality_Demos/IMERSIV.exe
+  - Assets/Scenes/LINEAR_TRACK.unity
+  playerPath: C:/Users/dombeck_lab/Desktop/Cell_Neuron/IMRSIV/Medium_Quality_Demos/Linear_Medium/IMERSIV.exe
