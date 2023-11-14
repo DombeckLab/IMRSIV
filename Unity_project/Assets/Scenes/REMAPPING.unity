@@ -1951,24 +1951,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee338af4af87f7498df2bac6d0b36cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseChromaticFix: 0
-  AllK1: -0.5
-  AllK2: 10.3
-  AllK3: 50
-  RedK1: 0
-  RedK2: 0
-  RedK3: 0
-  GreenK1: 0
-  GreenK2: 0
-  GreenK3: 0
-  BlueK1: 0
-  BlueK2: 0
-  BlueK3: 0
-  testTexture: {fileID: 0}
-  SavePath: C:\
-  saveTexture: 0
-  saveTex: {fileID: 0}
-  material: {fileID: 0}
 --- !u!114 &245045887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9438,24 +9420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee338af4af87f7498df2bac6d0b36cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseChromaticFix: 0
-  AllK1: 0
-  AllK2: -100
-  AllK3: 2257
-  RedK1: 0
-  RedK2: 0
-  RedK3: 0
-  GreenK1: 0
-  GreenK2: 0
-  GreenK3: 0
-  BlueK1: 0
-  BlueK2: 0
-  BlueK3: 0
-  testTexture: {fileID: 2800000, guid: f1d0602db5255f14fb8ad15ee9125123, type: 3}
-  SavePath: C:\
-  saveTexture: 0
-  saveTex: {fileID: 0}
-  material: {fileID: 0}
 --- !u!114 &1071132022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14403,7 +14367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550904117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.154, y: 0.113, z: -4.16}
+  m_LocalPosition: {x: -1.162, y: 0.113, z: -4.16}
   m_LocalScale: {x: 0.5156862, y: 0.46946844, z: 0.03134561}
   m_Children: []
   m_Father: {fileID: 588766847}

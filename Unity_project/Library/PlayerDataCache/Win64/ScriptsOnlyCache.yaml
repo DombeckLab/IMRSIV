@@ -8,7 +8,6 @@ ScriptsOnlyBuild:
     - GoldenEaglePlayer.Player
     - GoldenEagleThirdPersonCamera.ThirdPersonCamera
     - IMERSMovement
-    - Janelia.ExampleUsingNiDaqMx
     - LED_C2
     - Loom
     - LoomTrigger
@@ -23,7 +22,6 @@ ScriptsOnlyBuild:
     - StopMotion
     - digitalDaq
     - keyboardMoving
-    - rew
     - teleport
     - teleportTime
     - waterRewardSpout
@@ -50,7 +48,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/LOOM.unity:
+    Assets/Scenes/REMAPPING.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -110,8 +108,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2218}
     - Class: 114
-      Script: {instanceID: 2436}
-    - Class: 114
       Script: {instanceID: 2656}
     - Class: 114
       Script: {instanceID: 2794}
@@ -162,15 +158,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6028}
     - Class: 114
-      Script: {instanceID: 6166}
+      Script: {instanceID: 19702}
     - Class: 114
-      Script: {instanceID: 19692}
+      Script: {instanceID: 19704}
     - Class: 114
-      Script: {instanceID: 19694}
-    - Class: 114
-      Script: {instanceID: 19696}
-    - Class: 114
-      Script: {instanceID: 22164}
+      Script: {instanceID: 19706}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -1280,5 +1272,5 @@ ScriptsOnlyBuild:
     className: FPSCounter
   platform: 19
   scenePathNames:
-  - Assets/Scenes/LOOM.unity
-  playerPath: C:/Users/dombeck_lab/Desktop/ZenodoArchive/Loom_demo/IMERSIV.exe
+  - Assets/Scenes/REMAPPING.unity
+  playerPath: C:/Users/dombeck_lab/Desktop/ZenodoArchive/Medium_Quality_Demos/IMERSIV.exe

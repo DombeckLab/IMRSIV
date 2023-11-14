@@ -1,0 +1,8 @@
+t;px;py;pz;v;reward;door;licks;dt;d_ang;enc;enc_old;daqL;sx;sy;sz
+sampling rate;1000
+nlines;5
+vs;8
+4.204;5213;reward
+6.209;7225;reward
+8.181001;9190;reward
+10.524;11542;reward
