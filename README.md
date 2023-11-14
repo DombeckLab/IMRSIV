@@ -1,5 +1,5 @@
 # Overview
-This repository contains [Assembly Instructions](https://github.com/DombeckLab/IMRSIV#assembly-instructions), [3D models](https://github.com/DombeckLab/IMRSIV/tree/main/STL), [Zemax models](https://github.com/DombeckLab/IMRSIV/tree/main/Zemax), and Unity environment [files](https://github.com/DombeckLab/IMRSIV/tree/main/Unity_project) and [builds](https://github.com/DombeckLab/IMRSIV/tree/main/Unity_Demo_Builds) related to a manuscript under review. Executable demos are in root folder. (Medium/Ultra quality)
+This repository contains [Assembly Instructions](https://github.com/DombeckLab/IMRSIV#assembly-instructions), [3D models](https://github.com/DombeckLab/IMRSIV/tree/main/STL), [Zemax models](https://github.com/DombeckLab/IMRSIV/tree/main/Zemax), and Unity environment [files](https://github.com/DombeckLab/IMRSIV/tree/main/Unity_project) and [builds](https://github.com/DombeckLab/IMRSIV/tree/main/Unity_Demo_Builds) related to a manuscript under review.
 
 # Assembly Instructions
 ![skatch](Picture1.png)
