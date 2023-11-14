@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/zero_maze.unity
+    guid: 7c19d09d09455cc4991714e5c34d69aa
+  - enabled: 0
+    path: Assets/Scenes/sampleScene.unity
+    guid: 457caae504133534a8586488aa917afb
+  m_configObjects: {}
