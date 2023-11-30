@@ -36,6 +36,9 @@ public class digitalDaq : MonoBehaviour
     private static extern int DAQmxCreateCOPulseChanTime(ulong taskHandle, string counter, string nameToAssignToChannel, int units, int idlestate, double initialDelay, double lowTime, double highTime);
 
     [DllImport("nicaiu")]
+    private static extern int DAQmxCreateAIVoltageChan(ulong taskHandle, string physicalChannel, string nameToAssignToChannel, int terminalConfig, double minVal, double maxVal, int units, IntPtr customScaleName);
+
+    [DllImport("nicaiu")]
     private static extern int DAQmxCreateCILinEncoderChan(ulong taskHandle, string counter, string nameToAssignToChannel, int decodingType, bool ZidxEnable, double ZidxVal, int ZidxPhase, int units, double distPerPulse, double initialPos, IntPtr customScaleName);
     //  private static extern int DAQmxCreateCILinEncoderChan(ulong taskHandle, string counter[], string nameToAssignToChannel[], int decodingType, bool ZidxEnable, double ZidxVal, int ZidxPhase, int units, double distPerPulse, double initialPos, IntPtr customScaleName);
 
@@ -67,6 +70,7 @@ public class digitalDaq : MonoBehaviour
     //  ulong taskHandle = 0;
     ulong hEncoder = 0; // handle for encoder
     ulong hReward = 0; // handle for reward delivery
+    ulong hAI = 0; // handle for analog input
     ulong hDigitalread = 0; // handle for digital read
                             //   public uint data = 8; // 11
     uint data = 8;
@@ -97,6 +101,8 @@ public class digitalDaq : MonoBehaviour
     public uint numChannels = 0;
     uint bytesPerChan = 0;
     public uint rewardCount = 0;
+    double minv = -10;
+    double maxv = 10;
 
     // public uint dataDigitalSize = 0;
     uint numSampsAcquire = 100000;
@@ -115,11 +121,16 @@ public class digitalDaq : MonoBehaviour
         DAQmxCreateCOPulseChanTime(hReward, "Dev1/ctr1", "", 10364, 10214, 0, 0.001, 0.0140);
         // DAQmxCreateCOPulseChanTime(hReward, "Dev1/ctr1", "", "DAQmx_Val_Seconds", "DAQmx_Val_Low", 1.00, 0.50, 0.0140);
 
+        DAQmxCreateTask("", ref hAI);
+        DAQmxCreateAIVoltageChan(hAI,"Dev1/ai0","",-1,minv,maxv,10348,IntPtr.Zero);
+        DAQmxCfgSampClkTiming(hAI, "OnboardClock", digitalRate, 10280, 10123, numSampsAcquire);
+        cstatuss = DAQmxStartTask(hAI);
+
         DAQmxCreateTask("", ref hDigitalread);
         DAQmxCreateDIChan(hDigitalread, "Dev1/port0/line5:9", "", 1);
-        DAQmxCfgSampClkTiming(hDigitalread, "", digitalRate, 10280, 10123, numSampsAcquire);
+        DAQmxCfgSampClkTiming(hDigitalread, "ai/SampleClock", digitalRate, 10280, 10123, numSampsAcquire);
         //cstatuss = DAQmxCfgSampClkTiming(hDigitalread, "Dev1/ai/SampleClock", 1000, 10280, 10123, 10000);
-        DAQmxStartTask(hDigitalread);
+        statuss = DAQmxStartTask(hDigitalread);
         dataDigital = new byte[100000];
 
         //cstatuss = DAQmxStartTask(hReward);
@@ -136,7 +147,7 @@ public class digitalDaq : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        statuss = DAQmxReadCounterScalarU32(hEncoder, 0.001, ref data, reserved);
+        DAQmxReadCounterScalarU32(hEncoder, 0.001, ref data, reserved);
         //  statuss = DAQmxReadCounterScalarF64(taskHandle, 10.0, ref data, reserved);
         //  statuss = DAQmxWriteDigitalScalarU32(taskHandle, true, 10.0, data, reserved);
         data2old = data2;
@@ -169,7 +180,7 @@ public class digitalDaq : MonoBehaviour
         DAQmxGetReadNumChans(hDigitalread, ref numChannels);
         DAQmxGetReadDigitalLinesBytesPerChan(hDigitalread, ref bytesPerChan);
         uint dataDigitalSize = outputVarSampsPerChan * numChannels * bytesPerChan;
-        cstatuss = DAQmxReadDigitalLines(hDigitalread, numSamps, tout, false, tempData, dataDigitalSize, ref sampsRead, ref numBytes, IntPtr.Zero);
+        DAQmxReadDigitalLines(hDigitalread, numSamps, tout, false, tempData, dataDigitalSize, ref sampsRead, ref numBytes, IntPtr.Zero);
     }
 
     public void ClearDigital()
@@ -195,10 +206,12 @@ public class digitalDaq : MonoBehaviour
         DAQmxStopTask(hEncoder);
         DAQmxStopTask(hReward);
         DAQmxStopTask(hDigitalread);
+        DAQmxStopTask(hAI);
 
         DAQmxClearTask(hEncoder);
         DAQmxClearTask(hReward);
         DAQmxClearTask(hDigitalread);
+       DAQmxClearTask(hAI);
 
         // DAQmxResetDevice(devicename);
 
