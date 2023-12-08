@@ -1,5 +1,7 @@
 # Overview
-This repository contains [Assembly Instructions](https://github.com/DombeckLab/IMRSIV#assembly-instructions), [3D models](https://github.com/DombeckLab/IMRSIV/tree/main/STL), [Zemax models](https://github.com/DombeckLab/IMRSIV/tree/main/Zemax), and Unity environment [files](https://github.com/DombeckLab/IMRSIV/tree/main/Unity_project) and builds ([high quality](https://github.com/DombeckLab/IMRSIV/tree/main/Ultra_Quality_Demos)/[medium quality](https://github.com/DombeckLab/IMRSIV/tree/main/Medium_Quality_Demos)) related to the iMRSIV system.
+This repository contains [Assembly Instructions](https://github.com/DombeckLab/IMRSIV#assembly-instructions), [3D models](https://github.com/DombeckLab/IMRSIV/tree/main/STL), [Zemax models](https://github.com/DombeckLab/IMRSIV/tree/main/Zemax), and Unity environment [files](https://github.com/DombeckLab/IMRSIV/tree/main/Unity_project) and builds ([high quality](https://github.com/DombeckLab/IMRSIV/tree/main/Ultra_Quality_Demos)/[medium quality](https://github.com/DombeckLab/IMRSIV/tree/main/Medium_Quality_Demos)) related to the iMRSIV system, also published as [Pinke et al - Neuron 2023](https://www.cell.com/neuron/fulltext/S0896-6273(23)00893-0).
+
+<img src="Mouse_vision_cover.jpg" width="50%" height="50%">
 
 # Assembly Instructions
 ![skatch](Picture1.png)
@@ -80,6 +82,7 @@ Print Left and Right wing.stl and finish the edges with fine file
 3. Install and screw on the 2 arms
 4. Install any desired components for behavior by mounting to the breadboard or the U-mount
 5. Set up display HDMI controllers onto Thorlabs posts, and securely connect displays after assembly
-   
-   
 
+### Final assembled version running Unity
+
+<img src="example_setup.jpg" width="50%" height="50%">
