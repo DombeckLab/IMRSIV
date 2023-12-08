@@ -2,6 +2,7 @@
 This repository contains [Assembly Instructions](https://github.com/DombeckLab/IMRSIV#assembly-instructions), [3D models](https://github.com/DombeckLab/IMRSIV/tree/main/STL), [Zemax models](https://github.com/DombeckLab/IMRSIV/tree/main/Zemax), and Unity environment [files](https://github.com/DombeckLab/IMRSIV/tree/main/Unity_project) and builds ([high quality](https://github.com/DombeckLab/IMRSIV/tree/main/Ultra_Quality_Demos)/[medium quality](https://github.com/DombeckLab/IMRSIV/tree/main/Medium_Quality_Demos)) related to the iMRSIV system, also published as [Pinke et al - Neuron 2023](https://www.cell.com/neuron/fulltext/S0896-6273(23)00893-0).
 
 <img src="Mouse_vision_cover.jpg" width="50%" height="50%">
+(Illustration by @Rita)
 
 # Assembly Instructions
 ![skatch](Picture1.png)
