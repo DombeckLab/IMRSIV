@@ -14,6 +14,7 @@ Large mount that allows for attachment of all individual pieces. [U Mount](U_mou
 
 ## Headplate
 Custom titanium headplate used to attach to the U Mount. [headplate](headplate_iMRSIV.stl)
+For alignment during surgery, headplate with targets to align to the eyes. [headplate target](SurgTarg4.stl)
 
 ## Lens
 3D model of 12 mm [lens](12mmFinal_HQ.stl) along with related [Zemax files](12mm_CAD_ZEMAX).
